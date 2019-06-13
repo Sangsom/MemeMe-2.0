@@ -15,6 +15,7 @@
 		1B520FE622B22C0F00A76CD8 /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B520FE522B22C0F00A76CD8 /* MemeEditorViewController.swift */; };
 		1B520FE822B2411300A76CD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B520FE722B2411300A76CD8 /* Constants.swift */; };
 		1B520FEA22B2413800A76CD8 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B520FE922B2413800A76CD8 /* Meme.swift */; };
+		1BA20DA022B272FF00F28E3E /* MemeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA20D9F22B272FF00F28E3E /* MemeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B520FE522B22C0F00A76CD8 /* MemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorViewController.swift; sourceTree = "<group>"; };
 		1B520FE722B2411300A76CD8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B520FE922B2413800A76CD8 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		1BA20D9F22B272FF00F28E3E /* MemeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1B520FE522B22C0F00A76CD8 /* MemeEditorViewController.swift */,
 				1B520FE722B2411300A76CD8 /* Constants.swift */,
 				1B520FE922B2413800A76CD8 /* Meme.swift */,
+				1BA20D9F22B272FF00F28E3E /* MemeDetailsViewController.swift */,
 			);
 			path = "MemeMe 2.0";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B520FE422B22B0900A76CD8 /* SentMemeTableViewController.swift in Sources */,
+				1BA20DA022B272FF00F28E3E /* MemeDetailsViewController.swift in Sources */,
 				1B520FD222B2285F00A76CD8 /* AppDelegate.swift in Sources */,
 				1B520FE622B22C0F00A76CD8 /* MemeEditorViewController.swift in Sources */,
 				1B520FE822B2411300A76CD8 /* Constants.swift in Sources */,
