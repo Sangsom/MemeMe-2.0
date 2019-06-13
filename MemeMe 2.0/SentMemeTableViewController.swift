@@ -45,16 +45,6 @@ class SentMemeTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 1. try loading the "Detail" view controller and typecasting it to be the DetailViewController
-//        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-//            // 2. Success Set its selectedImage property
-//            vc.selectedImage = pictures[indexPath.row]
-//            vc.imageCount = pictures.count
-//            vc.currentImage = indexPath.row
-//
-//            // 3. now push it onto the navigation controller
-//            navigationController?.pushViewController(vc, animated: true)
-//        }
         if let vc = storyboard?.instantiateViewController(withIdentifier: "MemeDetails") as? MemeDetailsViewController {
             vc.selectedImage = memes[indexPath.row].updatedImage
             navigationController?.pushViewController(vc, animated: true)
@@ -66,6 +56,5 @@ class SentMemeTableViewController: UITableViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "MemeEditor") as? MemeEditorViewController {
             present(vc, animated: true)
         }
-
     }
 }
