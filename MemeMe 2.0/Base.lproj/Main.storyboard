@@ -47,16 +47,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-a0-fw2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSo-a0-fw2">
+                                <rect key="frame" x="0.0" y="44" width="0.0" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="ND1-Gw-Rhi"/>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3Z-OT-Qaj">
-                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3Z-OT-Qaj">
+                                <rect key="frame" x="0.0" y="1300" width="0.0" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Q0J-T6-fEx"/>
                                     <barButtonItem systemItem="camera" id="JcG-E8-6P8"/>
@@ -65,8 +63,45 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="oFR-zd-iMJ"/>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ffg-5i-2ui" userLabel="Meme Image">
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cV-Mz-sJh" userLabel="Top Text Field">
+                                <rect key="frame" x="57" y="138" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="OFT-Gv-dZK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jnn-9n-1hr" userLabel="Bottom Text Field">
+                                <rect key="frame" x="57" y="738" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Aw6-bq-eUm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7cV-Mz-sJh" firstAttribute="centerX" secondItem="0bm-dw-DbK" secondAttribute="centerX" id="2rd-9p-2sb"/>
+                            <constraint firstItem="RSo-a0-fw2" firstAttribute="leading" secondItem="S1j-oi-kLn" secondAttribute="leading" id="3dz-Sq-5bb"/>
+                            <constraint firstItem="ffg-5i-2ui" firstAttribute="top" secondItem="RSo-a0-fw2" secondAttribute="bottom" id="7Q9-dH-Q7i"/>
+                            <constraint firstItem="n3Z-OT-Qaj" firstAttribute="trailing" secondItem="S1j-oi-kLn" secondAttribute="trailing" id="9KT-t3-zaw"/>
+                            <constraint firstItem="jnn-9n-1hr" firstAttribute="centerX" secondItem="0bm-dw-DbK" secondAttribute="centerX" id="EZY-xc-Rzk"/>
+                            <constraint firstItem="ffg-5i-2ui" firstAttribute="leading" secondItem="S1j-oi-kLn" secondAttribute="leading" id="KoC-gn-U2W"/>
+                            <constraint firstItem="n3Z-OT-Qaj" firstAttribute="top" secondItem="ffg-5i-2ui" secondAttribute="bottom" id="dT5-fP-pNh"/>
+                            <constraint firstItem="7cV-Mz-sJh" firstAttribute="top" secondItem="RSo-a0-fw2" secondAttribute="bottom" constant="50" id="dx7-4M-dxa"/>
+                            <constraint firstItem="n3Z-OT-Qaj" firstAttribute="top" secondItem="jnn-9n-1hr" secondAttribute="bottom" constant="50" id="fYw-H5-wsj"/>
+                            <constraint firstItem="RSo-a0-fw2" firstAttribute="top" secondItem="S1j-oi-kLn" secondAttribute="top" id="jsD-4c-CUa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="n3Z-OT-Qaj" secondAttribute="bottom" id="mmI-Z0-YdJ"/>
+                            <constraint firstItem="n3Z-OT-Qaj" firstAttribute="leading" secondItem="S1j-oi-kLn" secondAttribute="leading" id="n08-iR-p9C"/>
+                            <constraint firstItem="RSo-a0-fw2" firstAttribute="trailing" secondItem="S1j-oi-kLn" secondAttribute="trailing" id="uzv-Hr-f8k"/>
+                            <constraint firstItem="S1j-oi-kLn" firstAttribute="trailing" secondItem="ffg-5i-2ui" secondAttribute="trailing" id="wcB-NN-QYl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S1j-oi-kLn"/>
                     </view>
                 </viewController>
