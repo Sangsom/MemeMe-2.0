@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app requires to access your phone storate to save memed image.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires to access your photo library in order to use images for meme generator.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app requires to access your camera in order to use your image for meme generator.</string>
 </dict>
 </plist>

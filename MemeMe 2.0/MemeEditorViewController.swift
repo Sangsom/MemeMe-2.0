@@ -154,8 +154,37 @@ UITextFieldDelegate {
     }
 
     @objc func shareItem() {
-        print("Share")
+        memedImage = generateImage()
+        let ac = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
+        ac.completionWithItemsHandler = {
+            (activityType, completed, returnedItems, activityError) in
+            if completed {
+                self.saveMeme()
+            }
+        }
+        present(ac, animated: true)
     }
+
+    func saveMeme() {
+        if memeImage != nil {
+            let meme = Meme(topString: topTextField.text!,
+                            bottomString: bottomTextField.text!,
+                            originalImage: memeImage.image!,
+                            updatedImage: memedImage!)
+        }
+    }
+
+    func generateImage() -> UIImage {
+        showNavAndToolbar(false)
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        showNavAndToolbar(true)
+
+        return memedImage
+    }
+
 
     func showNavAndToolbar(_ show: Bool) {
         if show {
