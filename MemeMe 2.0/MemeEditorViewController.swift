@@ -28,6 +28,15 @@ UITextFieldDelegate {
         initAppSettings()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+
     func initAppSettings() {
         memeImage.image = nil
         memeImage.contentMode = .scaleAspectFit
@@ -92,7 +101,51 @@ UITextFieldDelegate {
 
     // MARK: Text fields methods
 
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+        if textField.tag == 1 {
+            subscribeToKeyboardNotifications()
+        }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        unsubscribeFromKeyboardNotification()
+        return true
+    }
+
     // MARK: Keyboard methods
+
+    func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+            selector:  #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        NotificationCenter.default.addObserver(self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
+    }
+
+    func unsubscribeFromKeyboardNotification() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey]
+            as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
 
     // MARK: Misc methods
 
