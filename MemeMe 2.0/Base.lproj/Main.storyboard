@@ -144,17 +144,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4O-oO-7hB">
-                                <rect key="frame" x="186" y="199" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k3u-KC-RZg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hv1-BA-PpS" firstAttribute="bottom" secondItem="k3u-KC-RZg" secondAttribute="bottom" id="4RW-vF-CuN"/>
+                            <constraint firstItem="k3u-KC-RZg" firstAttribute="centerX" secondItem="Jvw-3x-RWq" secondAttribute="centerX" id="HBB-Jr-CDn"/>
+                            <constraint firstItem="Hv1-BA-PpS" firstAttribute="trailing" secondItem="k3u-KC-RZg" secondAttribute="trailing" id="iEJ-Jj-mTd"/>
+                            <constraint firstItem="k3u-KC-RZg" firstAttribute="leading" secondItem="Hv1-BA-PpS" secondAttribute="leading" id="oTy-Yr-F0Q"/>
+                            <constraint firstItem="k3u-KC-RZg" firstAttribute="top" secondItem="Hv1-BA-PpS" secondAttribute="top" id="wvR-ob-D9e"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Hv1-BA-PpS"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="k3u-KC-RZg" id="6Sw-45-58F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Aw-dM-Bqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

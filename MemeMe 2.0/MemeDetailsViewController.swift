@@ -10,10 +10,15 @@ import UIKit
 
 class MemeDetailsViewController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView!
+    var selectedImage: UIImage?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let selectedImage = selectedImage {
+            imageView.image = selectedImage
+        }
     }
 
 }

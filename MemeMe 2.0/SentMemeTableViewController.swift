@@ -56,6 +56,7 @@ class SentMemeTableViewController: UITableViewController {
 //            navigationController?.pushViewController(vc, animated: true)
 //        }
         if let vc = storyboard?.instantiateViewController(withIdentifier: "MemeDetails") as? MemeDetailsViewController {
+            vc.selectedImage = memes[indexPath.row].updatedImage
             navigationController?.pushViewController(vc, animated: true)
         }
     }
