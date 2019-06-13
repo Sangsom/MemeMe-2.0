@@ -21,6 +21,9 @@ class MemeTableViewController: UITableViewController {
     }
 
     @objc func addMeme() {
-        print("Opening.....")
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "MemeEditor") as? MemeEditorViewController {
+            present(vc, animated: true)
+        }
+
     }
 }
