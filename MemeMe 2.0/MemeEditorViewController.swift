@@ -67,6 +67,28 @@ UITextFieldDelegate {
     }
 
     // MARK: Image methods
+    @IBAction func pickAlbumImage(_ sender: UIBarButtonItem) {
+        pickAnImage(from: .photoLibrary)
+    }
+
+    @IBAction func pickCameraImage(_ sender: UIBarButtonItem) {
+        pickAnImage(from: .camera)
+    }
+
+    func pickAnImage(from source: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = source
+        present(imagePicker, animated: true, completion: nil)
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            memeImage.image = image
+            navigation.leftBarButtonItem?.isEnabled = true
+        }
+        dismiss(animated: true, completion: nil)
+    }
 
     // MARK: Text fields methods
 
