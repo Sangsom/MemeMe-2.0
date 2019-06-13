@@ -17,7 +17,8 @@ UITextFieldDelegate {
     @IBOutlet var bottomTextField: UITextField!
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var navigation: UINavigationItem!
-
+    @IBOutlet var toolbar: UIToolbar!
+    
     var memedImage: UIImage?
     // MARK: App lifecycle
     
@@ -65,13 +66,30 @@ UITextFieldDelegate {
         textField.textAlignment = .center
     }
 
+    // MARK: Image methods
+
+    // MARK: Text fields methods
+
+    // MARK: Keyboard methods
+
+    // MARK: Misc methods
 
     @objc func cancelTapped() {
-        print("Cancel")
+        initAppSettings()
     }
 
     @objc func shareItem() {
         print("Share")
+    }
+
+    func showNavAndToolbar(_ show: Bool) {
+        if show {
+            navigationBar.isHidden = false
+            toolbar.isHidden = false
+        } else {
+            navigationBar.isHidden = true
+            toolbar.isHidden = true
+        }
     }
     
 }
