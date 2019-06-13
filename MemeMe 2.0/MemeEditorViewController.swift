@@ -151,6 +151,9 @@ UITextFieldDelegate {
 
     @objc func cancelTapped() {
         initAppSettings()
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "InitialViewController") as? UITabBarController {
+            present(vc, animated: true)
+        }
     }
 
     @objc func shareItem() {
