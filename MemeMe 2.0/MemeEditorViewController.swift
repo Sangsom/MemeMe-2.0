@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MemeEditorViewController: UIViewController {
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+UITextFieldDelegate {
 
     @IBOutlet var memeImage: UIImageView!
     @IBOutlet var cameraButton: UIBarButtonItem!
@@ -16,6 +17,9 @@ class MemeEditorViewController: UIViewController {
     @IBOutlet var bottomTextField: UITextField!
     @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var navigation: UINavigationItem!
+
+    var memedImage: UIImage?
+    // MARK: App lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +40,31 @@ class MemeEditorViewController: UIViewController {
             barButtonSystemItem: .action,
             target: self,
             action: #selector(shareItem))
-        
+        navigation.leftBarButtonItem?.isEnabled = false
+        navigation.title = Constants.TextField.appName
+
+        initTextFields()
     }
+
+    func initTextFields() {
+        configureTextField(topTextField, with: Constants.TextField.topText)
+        configureTextField(bottomTextField, with: Constants.TextField.bottomText)
+    }
+
+    func configureTextField(_ textField: UITextField, with defaultText: String) {
+        textField.delegate = self
+        textField.text = defaultText
+        textField.borderStyle = .none
+        textField.autocapitalizationType = .allCharacters
+        textField.defaultTextAttributes = [
+            .font: UIFont(name: Constants.TextField.font, size: CGFloat(Constants.TextField.size))!,
+            .foregroundColor: Constants.TextField.foreGroundColor,
+            .strokeColor: Constants.TextField.strokeColor,
+            .strokeWidth: Constants.TextField.strokeWidth
+        ]
+        textField.textAlignment = .center
+    }
+
 
     @objc func cancelTapped() {
         print("Cancel")
