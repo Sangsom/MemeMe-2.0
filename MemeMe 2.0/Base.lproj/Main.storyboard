@@ -104,6 +104,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S1j-oi-kLn"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="jnn-9n-1hr" id="Jbf-zU-V83"/>
+                        <outlet property="cameraButton" destination="JcG-E8-6P8" id="8pf-oN-OvO"/>
+                        <outlet property="memeImage" destination="ffg-5i-2ui" id="qL9-kg-3g0"/>
+                        <outlet property="topTextField" destination="7cV-Mz-sJh" id="rIf-A7-Hdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J25-EW-tJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
