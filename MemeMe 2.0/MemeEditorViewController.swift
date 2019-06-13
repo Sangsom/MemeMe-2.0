@@ -174,7 +174,12 @@ UITextFieldDelegate {
                             bottomString: bottomTextField.text!,
                             originalImage: memeImage.image!,
                             updatedImage: memedImage!)
+
+            let object = UIApplication.shared.delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.memes.append(meme)
         }
+
     }
 
     func generateImage() -> UIImage {
