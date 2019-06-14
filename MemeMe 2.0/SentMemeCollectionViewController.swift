@@ -50,6 +50,13 @@ class SentMemeCollectionViewController: UICollectionViewController {
         }
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "MemeDetails") as? MemeDetailsViewController {
+            vc.selectedImage = memes[indexPath.row].updatedImage
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
     func initiateGridSettings() {
         let space: CGFloat = 3.0
         let dimension: CGFloat
