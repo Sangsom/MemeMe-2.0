@@ -17,6 +17,7 @@
 		1B520FEA22B2413800A76CD8 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B520FE922B2413800A76CD8 /* Meme.swift */; };
 		1BA20DA022B272FF00F28E3E /* MemeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA20D9F22B272FF00F28E3E /* MemeDetailsViewController.swift */; };
 		1BA20DA222B278D500F28E3E /* SentMemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA20DA122B278D500F28E3E /* SentMemeCollectionViewController.swift */; };
+		1BA20DA622B379A500F28E3E /* SentMemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA20DA522B379A500F28E3E /* SentMemeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1B520FE922B2413800A76CD8 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		1BA20D9F22B272FF00F28E3E /* MemeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDetailsViewController.swift; sourceTree = "<group>"; };
 		1BA20DA122B278D500F28E3E /* SentMemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemeCollectionViewController.swift; sourceTree = "<group>"; };
+		1BA20DA522B379A500F28E3E /* SentMemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				1B520FE922B2413800A76CD8 /* Meme.swift */,
 				1BA20D9F22B272FF00F28E3E /* MemeDetailsViewController.swift */,
 				1BA20DA122B278D500F28E3E /* SentMemeCollectionViewController.swift */,
+				1BA20DA522B379A500F28E3E /* SentMemeCollectionViewCell.swift */,
 			);
 			path = "MemeMe 2.0";
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA20DA622B379A500F28E3E /* SentMemeCollectionViewCell.swift in Sources */,
 				1B520FE422B22B0900A76CD8 /* SentMemeTableViewController.swift in Sources */,
 				1BA20DA022B272FF00F28E3E /* MemeDetailsViewController.swift in Sources */,
 				1B520FD222B2285F00A76CD8 /* AppDelegate.swift in Sources */,

@@ -37,6 +37,12 @@ class SentMemeCollectionViewController: UICollectionViewController {
         return memes.count
     }
 
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Item", for: indexPath) as! SentMemeCollectionViewCell
+        cell.imageView.image = memes[indexPath.row].updatedImage
+        return cell
+    }
+
     @objc func addMeme() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "MemeEditor") as? MemeEditorViewController {
             present(vc, animated: true)
